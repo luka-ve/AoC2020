@@ -20,7 +20,7 @@ def part2(data):
         if seat_ids[i + 1] - seat_ids[i] == 2:
             return seat_ids[i]
 
-    return 'No free seat found!'
+    raise Exception('No free seat found!')
 
 
 def get_seat_positions_from_raw_data(data):

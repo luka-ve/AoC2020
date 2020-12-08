@@ -1,9 +1,9 @@
-# Concatenate every group's individual strings and convert to set
 def part1(data):
     groups = data.split('\n\n')
 
     groups = [group.split('\n') for group in groups]
 
+    # Concatenate every group's individual strings and convert to set
     n_different_questions_per_group = [len(set(''.join(group))) for group in groups]
 
     return sum(n_different_questions_per_group)
